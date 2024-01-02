@@ -6,7 +6,14 @@ export const livestockData = [
     numberOfPeopleThatRated: '92',
     price: '10,000',
     seller: 'Ajike Njoku',
-    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi... Read More',
+    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi...',
+    warehouseDistribution: {
+      name: 'Gennee Warehousing',
+      weight: '20.00 Ton',
+    },
+    warehouseCertificate: {
+      title: 'FFM+ - aggregation.png',
+    },
   },
   {
     id: '2',
@@ -15,7 +22,14 @@ export const livestockData = [
     numberOfPeopleThatRated: '92',
     price: '10,000',
     seller: 'Ajike Njoku',
-    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi... Read More',
+    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi...',
+    warehouseDistribution: {
+      name: 'Gennee Warehousing',
+      weight: '20.00 Ton',
+    },
+    warehouseCertificate: {
+      title: 'FFM+ - aggregation.png',
+    },
   },
 ];
 
@@ -28,6 +42,13 @@ export const refrigeratedData = [
     price: '10,000',
     seller: 'Ajike Njoku',
     note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi... Read More',
+    warehouseDistribution: {
+      name: 'Gennee Warehousing',
+      weight: '20.00 Ton',
+    },
+    warehouseCertificate: {
+      title: 'FFM+ - aggregation.png',
+    },
   },
   {
     id: '2',
@@ -36,7 +57,14 @@ export const refrigeratedData = [
     numberOfPeopleThatRated: '92',
     price: '10,000',
     seller: 'Ajike Njoku',
-    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi... Read More',
+    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi...',
+    warehouseDistribution: {
+      name: 'Gennee Warehousing',
+      weight: '20.00 Ton',
+    },
+    warehouseCertificate: {
+      title: 'FFM+ - aggregation.png',
+    },
   },
 ];
 
@@ -49,6 +77,13 @@ export const dryProductsData = [
     price: '10,000',
     seller: 'Ajike Njoku',
     note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi... Read More',
+    warehouseDistribution: {
+      name: 'Gennee Warehousing',
+      weight: '20.00 Ton',
+    },
+    warehouseCertificate: {
+      title: 'FFM+ - aggregation.png',
+    },
   },
   {
     id: '2',
@@ -57,7 +92,14 @@ export const dryProductsData = [
     numberOfPeopleThatRated: '92',
     price: '10,000',
     seller: 'Ajike Njoku',
-    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi... Read More',
+    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi...',
+    warehouseDistribution: {
+      name: 'Gennee Warehousing',
+      weight: '20.00 Ton',
+    },
+    warehouseCertificate: {
+      title: 'FFM+ - aggregation.png',
+    },
   },
 ];
 
@@ -69,7 +111,14 @@ export const farmInputsData = [
     numberOfPeopleThatRated: '92',
     price: '10,000',
     seller: 'Ajike Njoku',
-    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi... Read More',
+    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi...',
+    warehouseDistribution: {
+      name: 'Gennee Warehousing',
+      weight: '20.00 Ton',
+    },
+    warehouseCertificate: {
+      title: 'FFM+ - aggregation.png',
+    },
   },
   {
     id: '2',
@@ -78,6 +127,13 @@ export const farmInputsData = [
     numberOfPeopleThatRated: '92',
     price: '10,000',
     seller: 'Ajike Njoku',
-    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi... Read More',
+    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi...',
+    warehouseDistribution: {
+      name: 'Gennee Warehousing',
+      weight: '20.00 Ton',
+    },
+    warehouseCertificate: {
+      title: 'FFM+ - aggregation.png',
+    },
   },
 ];
