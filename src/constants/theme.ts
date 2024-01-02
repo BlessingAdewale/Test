@@ -6,7 +6,14 @@ export const theme = {
   dark: false,
   colors: {
     ...DefaultTheme.colors,
-    teal1: '#0898A0',
-    teal2: '#41BCC4',
+    background: '#FFF',
+    primary: '#006D33',
+    secondary: '#F0F5EC',
+    whiteTextColor: '#FFF',
+    blackTextCoor: '#090909',
+    greetingColor: '#110',
+    greyColor: '#BEBEBE',
+    grey2Color: '#8B8B8B'
+
   },
 };
