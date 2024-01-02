@@ -4,8 +4,8 @@ const { width } = Dimensions.get('window');
 const { height } = Dimensions.get('window');
 
 // Based on the phone scale used in the Figma Design
-const widthBaseScale = width / 375;
-const heightBaseScale = height / 812;
+const widthBaseScale = width / 390;
+const heightBaseScale = height / 1735;
 
 export function normalize(size: number, based: 'width' | 'height' = 'width') {
   // const newSize = size * scale;
