@@ -2,14 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { PaperProvider } from 'react-native-paper';
+import { NavigationContainer } from './src/navigation/NavigationContainer';
 
 export default function App() {
   return (
     <PaperProvider>
-    <View style={styles.container}>
-      <Text>Hello World!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <NavigationContainer />
     </PaperProvider>
   );
 }
