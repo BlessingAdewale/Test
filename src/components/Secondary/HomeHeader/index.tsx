@@ -33,7 +33,7 @@ export const HomeHeader = () => {
         </View>
       </View>
       <TouchableOpacity>
-        <MyNotificationImage height={layout.heightPixel(32)} width={layout.widthPixel(32)} />
+        <MyNotificationImage height={layout.heightPixel(52)} width={layout.widthPixel(48)} />
       </TouchableOpacity>
     </View>
   );
@@ -44,6 +44,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    paddingTop: layout.pixelSizeVertical(20),
+    paddingHorizontal: layout.pixelSizeHorizontal(20),
+    paddingBottom: layout.pixelSizeVertical(20),
   },
   secondWrapper: {
     flexDirection: 'row',

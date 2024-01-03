@@ -5,7 +5,7 @@ import { theme } from '@constants';
 export const globalStyles = StyleSheet.create({
   container: {
     paddingHorizontal: layout.pixelSizeHorizontal(20),
-    flexGrow: 1,
+    flex: 1,
     backgroundColor: theme.colors.background
   },
   rowCenter: {
