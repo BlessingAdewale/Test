@@ -1,16 +1,21 @@
-import { View, Text, SafeAreaView } from 'react-native';
+import { View, Text, SafeAreaView, ScrollView } from 'react-native';
 import React from 'react';
 import { globalStyles } from '@globalStyles';
 import { CarouselSlide, HomeHeader, SearchFeature, InformationCard } from '@components';
+import { livestockData, refrigeratedData, dryProductsData, farmInputsData } from '@constants';
 
 export const Home = () => {
   return (
     <SafeAreaView style={[globalStyles.container]}>
-      <HomeHeader />
-      <SearchFeature />
-      <CarouselSlide />
-      <InformationCard />
-
+      <ScrollView>
+        <HomeHeader />
+        <SearchFeature />
+        <CarouselSlide />
+        <InformationCard title="Livestock Products" data={livestockData} />
+        <InformationCard title="Refrigerated Products" data={refrigeratedData} />
+        <InformationCard title="Dry Products" data={dryProductsData} />
+        <InformationCard title="Farm Inputs" data={farmInputsData} />
+      </ScrollView>
     </SafeAreaView>
   );
 };

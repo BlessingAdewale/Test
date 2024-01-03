@@ -49,5 +49,9 @@ const styles = StyleSheet.create({
     borderRadius: layout.fontPixel(12),
     marginRight: layout.pixelSizeHorizontal(49),
   },
-  inputStyle: {},
+  inputStyle: {
+    fontSize: layout.fontPixel(14),
+    fontWeight: '400',
+    fontFamily: 'Poppins_600SemiBold',
+  },
 });

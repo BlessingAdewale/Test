@@ -1,16 +1,21 @@
-import images from "./images";
+import images from './images';
 
-export const carouselData= [
+export const carouselData = [
   {
     id: '1',
     text: 'Get high quality farm products and inputs',
-    image: images.fruit
+    image: images.fruit,
   },
   {
     id: '2',
     text: 'Get high quality farm products and inputs',
-    image: images.fruit
-  }
+    image: images.fruit,
+  },
+  {
+    id: '3',
+    text: 'Get high quality farm products and inputs',
+    image: images.fruit,
+  },
 ];
 
 export const livestockData = [
@@ -64,7 +69,8 @@ export const livestockData = [
     warehouseCertificate: {
       title: 'FFM+ - aggregation.png',
     },
-  }
+  },
+
 ];
 
 export const refrigeratedData = [
@@ -118,7 +124,8 @@ export const refrigeratedData = [
     warehouseCertificate: {
       title: 'FFM+ - aggregation.png',
     },
-  }
+  },
+
 ];
 
 export const dryProductsData = [
@@ -156,6 +163,7 @@ export const dryProductsData = [
       title: 'FFM+ - aggregation.png',
     },
   },
+
 ];
 
 export const farmInputsData = [
@@ -210,4 +218,5 @@ export const farmInputsData = [
       title: 'FFM+ - aggregation.png',
     },
   },
+ 
 ];

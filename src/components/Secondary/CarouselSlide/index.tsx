@@ -1,7 +1,7 @@
 import { Animated, FlatList, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import React, { useRef } from 'react';
 import { Pagination } from '../Pagination';
-import { carouselData, carouselDataType } from '@constants';
+import { carouselData, carouselDataType, theme } from '@constants';
 import { layout } from '@utils';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -28,7 +28,7 @@ export const CarouselSlide = () => {
     return (
       <View style={styles.container}>
         <LinearGradient
-          colors={[' rgba(0, 0, 0, 0.00)', ' rgba(0, 0, 0, 0.87)']}
+          colors={[' rgba(0, 0, 0, 0.87)', ' rgba(0, 0, 0, 0.87)']}
           style={styles.background}
         />
         <ImageBackground source={item.image} resizeMode="cover" style={styles.image}>
@@ -59,32 +59,32 @@ export const CarouselSlide = () => {
 const styles = StyleSheet.create({
   totalWrapper: {
     paddingHorizontal: layout.pixelSizeHorizontal(20),
+   
   },
   text: {
     paddingVertical: layout.pixelSizeVertical(25),
     paddingRight: layout.pixelSizeHorizontal(99),
     paddingLeft: layout.pixelSizeHorizontal(16),
+    color: theme.colors.whiteTextColor,
+    fontWeight: '600',
+    fontFamily: 'Poppins_600SemiBold',
   },
   container: {
-    width: layout.widthPixel(279),
+    width: layout.widthPixel(253),
     height: layout.heightPixel(279),
-    flex: 1,
-    marginBottom: layout.pixelSizeHorizontal(16)
-    
+    marginBottom: layout.pixelSizeHorizontal(16),
   },
 
   image: {
-    flex: 1,
     resizeMode: 'cover',
     justifyContent: 'center',
     overflow: 'hidden',
     borderRadius: layout.fontPixel(8),
-    width: layout.widthPixel(279),
+    width: layout.widthPixel(223),
     height: layout.heightPixel(279),
-   
   },
   background: {
-    width: '100%',
+    width: layout.widthPixel(223),
     position: 'absolute',
     left: 0,
     right: 0,

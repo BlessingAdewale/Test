@@ -6,9 +6,13 @@ export interface carouselDataType {
   };
 }
 
+export interface headerDataType{
+  id: string,
+  title: string
+}
+
 export interface AllDataType {
   data: {
-    data: ArrayLike<any> | null | undefined;
     title: any;
     id: string;
     name: string;
@@ -25,6 +29,6 @@ export interface AllDataType {
     warehouseCertificate: {
       title: string;
     };
-    
+
   };
 }

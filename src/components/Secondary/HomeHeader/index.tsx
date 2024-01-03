@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { Avatar } from 'react-native-paper';
-import { images } from '@constants';
+import { images, theme } from '@constants';
 import MyNotificationImage from '@assets/images/notification.svg';
 import WavingHand from '@assets/images/waving.svg';
 import { layout } from '@utils';
@@ -25,11 +25,11 @@ export const HomeHeader = () => {
       <View style={styles.secondWrapper}>
         <Avatar.Image size={48} source={images.avatar} style={styles.avatar} />
         <View>
-          <Text>
+          <Text style={styles.greeting} >
             {greeting}
             <WavingHand height={layout.heightPixel(20)} width={layout.widthPixel(20)} />
           </Text>
-          <Text>Welcome back </Text>
+          <Text style={styles.welcomeback} >Welcome back </Text>
         </View>
       </View>
       <TouchableOpacity>
@@ -56,4 +56,16 @@ const styles = StyleSheet.create({
   avatar: {
     marginRight: layout.pixelSizeHorizontal(24),
   },
+  greeting:{
+    color: '#110',
+    fontSize: layout.fontPixel(16),
+    fontWeight: '600',
+    fontFamily: 'Poppins_600SemiBold',
+  },
+  welcomeback:{
+    color: '#110',
+    fontSize: layout.fontPixel(13),
+    fontWeight: '300',
+    fontFamily: 'Poppins_300Light'
+  }
 });
