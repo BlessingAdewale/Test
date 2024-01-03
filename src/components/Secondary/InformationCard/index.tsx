@@ -24,6 +24,7 @@ export const InformationCard = ({ data, title }: any) => {
   return (
     <View>
       <ProductHeader title={title} />
+      <View style={{    paddingHorizontal: layout.pixelSizeHorizontal(20),}} > 
       <FlatList
         data={data}
         renderItem={renderItem}
@@ -31,6 +32,8 @@ export const InformationCard = ({ data, title }: any) => {
         horizontal
         showsHorizontalScrollIndicator={false}
       />
+      </View>
+   
     </View>
   );
 };
@@ -43,8 +46,9 @@ const styles = StyleSheet.create({
     paddingRight: layout.pixelSizeHorizontal(20),
   },
   wrapper: {
-    marginHorizontal: layout.pixelSizeHorizontal(20),
+
     paddingTop: layout.pixelSizeVertical(24),
+    paddingRight: layout.pixelSizeHorizontal(20),
   },
   ratingWrapper: {
     flexDirection: 'row',
