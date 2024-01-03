@@ -5,10 +5,12 @@ import { PaperProvider } from 'react-native-paper';
 
 export default function App() {
   return (
+    <PaperProvider>
     <View style={styles.container}>
       <Text>Hello World!</Text>
       <StatusBar style="auto" />
     </View>
+    </PaperProvider>
   );
 }
 
