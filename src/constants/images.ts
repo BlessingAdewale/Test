@@ -7,6 +7,7 @@ const goat = require('../assets/images/livestock/goat.png') as number;
 const grapes = require('../assets/images/refrigerated/grapes.png') as number;
 const mangoes = require('../assets/images/refrigerated/mangoes.png') as number;
 const fruit = require('../assets/images/carousel/fruit.png') as number;
+const avatar = require('../assets/images/avatar.png') as number;
 
 
 export default {
@@ -18,5 +19,6 @@ export default {
   goat,
   grapes,
   mangoes,
-  fruit
+  fruit,
+  avatar
 };

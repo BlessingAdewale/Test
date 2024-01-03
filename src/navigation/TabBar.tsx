@@ -21,8 +21,7 @@ export default TabBar;
 
 const styles = StyleSheet.create({
   tabBarStyle: {
-    // backgroundColor: theme.colors.secondary,
-    backgroundColor: '#110',
+    backgroundColor: theme.colors.secondary,
     flexDirection: 'row',
     position: 'absolute',
     alignItems: 'center',
@@ -31,7 +30,7 @@ const styles = StyleSheet.create({
     bottom: 20, // here you can use the bottom inset for more flexbility
     left: 20,
     right: 20,
-    height: layout.heightPixel(90),
+    height: layout.heightPixel(73),
     flex: 1,
   },
 });
