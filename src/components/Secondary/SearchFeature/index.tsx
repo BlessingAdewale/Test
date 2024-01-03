@@ -8,7 +8,7 @@ import { Feather, EvilIcons } from '@expo/vector-icons';
 export const SearchFeature = () => {
   const [searchQuery, setSearchQuery] = React.useState('');
 
-  const onChangeSearch = (query: React.SetStateAction<string>) => setSearchQuery(query);
+  const onChangeSearch = (query: string) => setSearchQuery(query);
 
   return (
     <View style={styles.container}>
