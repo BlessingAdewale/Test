@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    bottom: layout.heightPixel(330),
+    bottom: layout.heightPixel(10),
     // right: layout.widthPixel(12),
     // left: layout.widthPixel(151),
     // top: layout.heightPixel(0)
