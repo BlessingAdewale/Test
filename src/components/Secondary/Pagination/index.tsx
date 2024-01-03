@@ -35,10 +35,10 @@ const styles = StyleSheet.create({
   },
 
   dot: {
-    width: layout.widthPixel(6),
-    height: layout.heightPixel(6),
+    width: layout.widthPixel(7),
+    height: layout.heightPixel(7),
     borderRadius: layout.fontPixel(6),
     marginHorizontal: layout.pixelSizeHorizontal(5),
-    backgroundColor: 'rgba(113, 135, 156, 0.10)',
+    backgroundColor: '#D9D9D9',
   },
 });
