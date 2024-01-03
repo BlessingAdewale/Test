@@ -21,9 +21,10 @@ export const SearchFeature = () => {
           placeholderTextColor={'#BEBEBE'}
           iconColor={'#BEBEBE'}
           rippleColor={'#BEBEBE'}
+          traileringRippleColor={'#BEBEBE'}
         />
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity style={styles.searchButton}>
         <MySearchButton height={layout.heightPixel(96)} width={layout.widthPixel(54)} />
       </TouchableOpacity>
     </View>
@@ -33,13 +34,17 @@ export const SearchFeature = () => {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: layout.pixelSizeHorizontal(20),
-    // flexDirection: 'row',
-    // alignItems: 'center',
   },
-  searchbar: {},
+  searchButton: {
+    position: 'absolute',
+    right: layout.widthPixel(12),
+    left: layout.widthPixel(325),
+    height: layout.heightPixel(25),
+  },
   searchContainer: {
     backgroundColor: 'rgba(242, 242, 242, 0.50)',
     borderRadius: layout.fontPixel(8),
+    marginRight: layout.pixelSizeHorizontal(49),
     // flex: 1,
     // flexDirection: 'row',
     // alignItems: 'center',

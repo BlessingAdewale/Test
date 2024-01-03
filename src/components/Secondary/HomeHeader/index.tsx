@@ -33,7 +33,7 @@ export const HomeHeader = () => {
         </View>
       </View>
       <TouchableOpacity>
-        <MyNotificationImage height={layout.heightPixel(52)} width={layout.widthPixel(48)} />
+        <MyNotificationImage height={layout.heightPixel(52)}  />
       </TouchableOpacity>
     </View>
   );
