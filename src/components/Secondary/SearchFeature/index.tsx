@@ -22,10 +22,11 @@ export const SearchFeature = () => {
           iconColor={'#BEBEBE'}
           rippleColor={'#BEBEBE'}
           traileringRippleColor={'#BEBEBE'}
+          inputStyle={styles.inputStyle}
         />
       </View>
       <TouchableOpacity style={styles.searchButton}>
-        <MySearchButton height={layout.heightPixel(96)} width={layout.widthPixel(54)} />
+        <MySearchButton height={layout.heightPixel(98)} width={layout.widthPixel(54)} />
       </TouchableOpacity>
     </View>
   );
@@ -34,19 +35,19 @@ export const SearchFeature = () => {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: layout.pixelSizeHorizontal(20),
+    marginBottom: layout.heightPixel(24),
   },
   searchButton: {
     position: 'absolute',
     right: layout.widthPixel(12),
     left: layout.widthPixel(325),
-    height: layout.heightPixel(25),
+    height: layout.heightPixel(27),
+    bottom: layout.heightPixel(72),
   },
   searchContainer: {
     backgroundColor: 'rgba(242, 242, 242, 0.50)',
-    borderRadius: layout.fontPixel(8),
+    borderRadius: layout.fontPixel(12),
     marginRight: layout.pixelSizeHorizontal(49),
-    // flex: 1,
-    // flexDirection: 'row',
-    // alignItems: 'center',
   },
+  inputStyle: {},
 });

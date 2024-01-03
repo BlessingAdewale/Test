@@ -8,6 +8,7 @@ export const Home = () => {
     <SafeAreaView  style={[globalStyles.container]}    >
      <HomeHeader />
      <SearchFeature />
+     {/* <CarouselSlide /> */}
     </SafeAreaView>
   )
 }
