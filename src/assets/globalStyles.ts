@@ -3,10 +3,10 @@ import { layout } from '@utils';
 import { theme } from '@constants';
 
 export const globalStyles = StyleSheet.create({
-  wrapper: { flex: 1, backgroundColor: theme.colors.background },
   container: {
     paddingHorizontal: layout.pixelSizeHorizontal(20),
     flexGrow: 1,
+    backgroundColor: theme.colors.background
   },
   rowCenter: {
     flexDirection: 'row',

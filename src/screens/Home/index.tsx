@@ -1,11 +1,12 @@
-import { View, Text } from 'react-native'
+import { View, Text, SafeAreaView } from 'react-native'
 import React from 'react'
+import { globalStyles } from '@globalStyles'
 
 export const Home = () => {
   return (
-    <View>
-      <Text>This is Home</Text>
-    </View>
+    <SafeAreaView  style={[globalStyles.container]}    >
+     {/* <HomeHeader /> */}
+    </SafeAreaView>
   )
 }
 

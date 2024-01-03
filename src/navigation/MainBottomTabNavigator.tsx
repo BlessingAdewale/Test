@@ -9,11 +9,17 @@ const BottomTab = createBottomTabNavigator<MainBottomTabParamList>();
 
 export const MainBottomTabNavigator = () => {
   return (
-    <BottomTab.Navigator  tabBar={TabBar}   >
-    <BottomTab.Screen name="Home" component={Home} />
-    <BottomTab.Screen name="Orders" component={Orders} />
-    <BottomTab.Screen name="Wallet" component={Wallet} />
-    <BottomTab.Screen name="Profile" component={Profile} />
-  </BottomTab.Navigator>
+    <BottomTab.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        headerShown: false,
+      }}
+      tabBar={TabBar}
+    >
+      <BottomTab.Screen name="Home" component={Home} />
+      <BottomTab.Screen name="Orders" component={Orders} />
+      <BottomTab.Screen name="Wallet" component={Wallet} />
+      <BottomTab.Screen name="Profile" component={Profile} />
+    </BottomTab.Navigator>
   );
 };

@@ -6,17 +6,14 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
-import {
-  TabNavigationState,
-  ParamListBase,
-  NavigationHelpers,
-} from '@react-navigation/native';
+import { TabNavigationState, ParamListBase, NavigationHelpers } from '@react-navigation/native';
 import { BottomTabNavigationEventMap } from '@react-navigation/bottom-tabs';
 import { AntDesign } from '@expo/vector-icons';
+import { theme } from '@constants';
 export const routes = {
   home: { name: 'Home', icon: 'home' },
-  orders: { name: 'Orders', icon: 'orders' },
-  wallet: { name: 'Wallet', icon: 'wallet' },
+  orders: { name: 'Orders', icon: 'home' },
+  wallet: { name: 'Wallet', icon: 'home' },
   profiles: { name: 'Profile', icon: 'profile' },
 };
 type Props = {
@@ -59,8 +56,8 @@ const TabBarComponent = ({ state, navigation, descriptors }: Props) => {
           options.tabBarLabel !== undefined
             ? options.tabBarLabel
             : options.title !== undefined
-            ? options.title
-            : route.name;
+              ? options.title
+              : route.name;
 
         const isFocused = state.index === index;
 
@@ -100,9 +97,9 @@ const TabBarComponent = ({ state, navigation, descriptors }: Props) => {
             style={styles.item}
           >
             <AntDesign
-              name={icon}
+            //   name={icon}
               size={24}
-              color={isFocused ? '#A9A9A9' : 'black'}
+              color={isFocused ? theme.colors.primary : theme.colors.bottomTabColor}
             />
           </Pressable>
         );
@@ -116,12 +113,14 @@ export default TabBarComponent;
 const styles = StyleSheet.create({
   container: {
     width: TAB_WIDTH,
-    height: 40,
-    backgroundColor: 'blue',
+    height: 5,
+    backgroundColor: 'white',
     zIndex: 0,
     position: 'absolute',
     marginHorizontal: 20,
-    borderRadius: 20,
+    paddingBottom: 10,
+    borderTopRadius: 20,
+    // borderTopColor: 'white'
   },
   item: {
     flex: 1,
