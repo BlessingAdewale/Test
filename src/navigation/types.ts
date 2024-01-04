@@ -1,3 +1,4 @@
+import { ProductDetails } from '@screens';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RouteProp } from '@react-navigation/native';
 
@@ -12,3 +13,9 @@ export type MainBottomTabParamList = {
   Wallet: undefined;
   Profile: undefined;
 };
+
+export type HomeTabNavigationProp = NativeStackNavigationProp<RootStackParamList, 'HomeStack'>;
+export type ProductDetailsProp = RouteProp<
+  RootStackParamList,
+  'ProductDetails'
+>;

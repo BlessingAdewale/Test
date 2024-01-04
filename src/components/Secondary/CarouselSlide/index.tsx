@@ -27,16 +27,24 @@ export const CarouselSlide = () => {
   const renderItem = React.useCallback(({ item }: carouselDataType) => {
     return (
       <View style={styles.container}>
-        <LinearGradient
-          colors={[' rgba(0, 0, 0, 0.87)', ' rgba(0, 0, 0, 0.87)']}
-          style={styles.background}
-        />
         <ImageBackground source={item.image} resizeMode="cover" style={styles.image}>
+          <LinearGradient
+            colors={[' rgba(0, 0, 0, 0)', ' rgba(0, 0, 0, 0.87)']}
+            style={styles.background}
+          />
           <Text style={styles.text}>{item.text}</Text>
         </ImageBackground>
       </View>
     );
   }, []);
+
+  // const handleOnViewableItemsChanged = useRef(({viewableItems})=> {
+  //   setIndex(viewableItems.[0].index);}).current
+  // })
+
+  // const viewabilityConfig = useRef({
+  //   itemVisiblePercentThreshold: 50,
+  // }.current)
 
   return (
     <View style={styles.totalWrapper}>
@@ -50,6 +58,8 @@ export const CarouselSlide = () => {
         // bounces={false}
         snapToAlignment="center"
         onScroll={handleOnScroll}
+        // onViewableItemsChanged={handleOnViewableItemsChanged}
+        // viewabilityConfig={viewabilityConfig}
       />
       <Pagination data={carouselData} scrollX={scrollX} />
     </View>
@@ -59,7 +69,6 @@ export const CarouselSlide = () => {
 const styles = StyleSheet.create({
   totalWrapper: {
     paddingHorizontal: layout.pixelSizeHorizontal(20),
-   
   },
   text: {
     paddingVertical: layout.pixelSizeVertical(25),
@@ -70,9 +79,10 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins_600SemiBold',
   },
   container: {
-    width: layout.widthPixel(253),
+    width: layout.widthPixel(123),
     height: layout.heightPixel(279),
     marginBottom: layout.pixelSizeHorizontal(16),
+    marginRight: 130,
   },
 
   image: {

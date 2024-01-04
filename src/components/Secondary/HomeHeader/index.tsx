@@ -23,7 +23,7 @@ export const HomeHeader = () => {
   return (
     <View style={styles.firstWrapper}>
       <View style={styles.secondWrapper}>
-        <Avatar.Image size={48} source={images.avatar} style={styles.avatar} />
+        <Avatar.Image size={28} source={images.avatar} style={styles.avatar} />
         <View>
           <Text style={styles.greeting} >
             {greeting}
@@ -33,7 +33,7 @@ export const HomeHeader = () => {
         </View>
       </View>
       <TouchableOpacity>
-        <MyNotificationImage height={layout.heightPixel(52)}  />
+        <MyNotificationImage height={layout.heightPixel(34)}  />
       </TouchableOpacity>
     </View>
   );

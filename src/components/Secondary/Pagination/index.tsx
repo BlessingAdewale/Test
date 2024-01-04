@@ -1,10 +1,11 @@
+import { theme } from '@constants';
 import { layout } from '@utils';
 import React from 'react';
 import { StyleSheet, Animated, View, Dimensions } from 'react-native';
 
 const { width } = Dimensions.get('screen');
 
-export const Pagination = ({ data, scrollX }: any) => {
+export const Pagination = ({ data, scrollX, index }: any) => {
   return (
     <View style={styles.container}>
       {data.map((item: any, idx: number) => {
@@ -12,10 +13,24 @@ export const Pagination = ({ data, scrollX }: any) => {
 
         const dotWidth = scrollX.interpolate({
           inputRange,
-          outputRange: [12, 20, 12],
+          outputRange: [6, 14, 6],
           extrapolate: 'clamp',
         });
-        return <Animated.View key={idx} style={[styles.dot, { width: dotWidth }]} />;
+        const opacity = scrollX.interpolate({
+          inputRange,
+          outputRange: [0.2, 1, 0.2],
+          extrapolate: 'clamp',
+        });
+
+        const backgroundColor = scrollX.interpolate({
+          inputRange,
+          outputRange: [ "#f1ebeb","#006D33", "#D9D9D9"]
+        })
+
+        return <Animated.View key={idx} style={[styles.dot, { width: dotWidth, backgroundColor },
+          //  idx === index && styles.dotActive
+          
+          ]} />;
       })}
     </View>
   );
@@ -35,10 +50,13 @@ const styles = StyleSheet.create({
   },
 
   dot: {
-    width: layout.widthPixel(7),
-    height: layout.heightPixel(7),
-    borderRadius: layout.fontPixel(6),
-    marginHorizontal: layout.pixelSizeHorizontal(5),
-    backgroundColor: '#D9D9D9',
+    width: layout.widthPixel(10),
+    height: layout.heightPixel(8),
+    borderRadius: layout.fontPixel(600),
+    marginHorizontal: layout.pixelSizeHorizontal(3),
+    // backgroundColor: '#110',
   },
+  dotActive:{
+    // backgroundColor: theme.colors.primary
+  }
 });

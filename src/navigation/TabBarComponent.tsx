@@ -97,10 +97,11 @@ const TabBarComponent = ({ state, navigation, descriptors }: Props) => {
             style={styles.item}
           >
             <AntDesign
-            //   name={icon}
+              // name={icon}
               size={24}
               color={isFocused ? theme.colors.primary : theme.colors.bottomTabColor}
             />
+          
           </Pressable>
         );
       })}

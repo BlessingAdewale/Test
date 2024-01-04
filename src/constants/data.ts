@@ -163,6 +163,23 @@ export const dryProductsData = [
       title: 'FFM+ - aggregation.png',
     },
   },
+  {
+    id: '3',
+    name: 'Beans',
+    rated: '4.5',
+    numberOfPeopleThatRated: '92',
+    image: images.beans,
+    price: '10,000',
+    seller: 'Ajike Njoku',
+    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi...',
+    warehouseDistribution: {
+      name: 'Gennee Warehousing',
+      weight: '20.00 Ton',
+    },
+    warehouseCertificate: {
+      title: 'FFM+ - aggregation.png',
+    }
+  },
 
 ];
 

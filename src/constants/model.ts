@@ -12,7 +12,6 @@ export interface headerDataType{
 }
 
 export interface AllDataType {
-  data: {
     title: any;
     id: string;
     name: string;
@@ -29,6 +28,4 @@ export interface AllDataType {
     warehouseCertificate: {
       title: string;
     };
-
-  };
 }
