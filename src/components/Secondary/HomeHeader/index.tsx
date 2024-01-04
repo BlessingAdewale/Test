@@ -39,7 +39,9 @@ export const HomeHeader = () => {
         </View>
       </View>
       <TouchableOpacity>
-        <MyNotificationImage height={layout.heightPixel(34)} />
+        <MyNotificationImage
+          height={usePlatform().isAndroid ? layout.heightPixel(36) : layout.heightPixel(34)}
+        />
       </TouchableOpacity>
     </View>
   );
@@ -53,7 +55,7 @@ const styles = StyleSheet.create({
     paddingTop: usePlatform().isAndroid
       ? layout.pixelSizeVertical(90)
       : layout.pixelSizeVertical(20),
-    paddingHorizontal: usePlatform().isAndroid ? 0 : layout.pixelSizeHorizontal(20),
+    paddingHorizontal: layout.pixelSizeHorizontal(20),
     paddingBottom: layout.pixelSizeVertical(20),
   },
   secondWrapper: {

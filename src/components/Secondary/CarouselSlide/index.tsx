@@ -4,6 +4,7 @@ import { Pagination } from '../Pagination';
 import { carouselData, carouselDataType, theme } from '@constants';
 import { layout } from '@utils';
 import { LinearGradient } from 'expo-linear-gradient';
+import { usePlatform } from '@hooks';
 
 export const CarouselSlide = () => {
   const scrollX = useRef(new Animated.Value(0)).current;
@@ -29,7 +30,9 @@ export const CarouselSlide = () => {
       <View style={styles.container}>
         <ImageBackground source={item.image} resizeMode="cover" style={styles.image}>
           <LinearGradient
-            colors={[' rgba(0, 0, 0, 0)', ' rgba(0, 0, 0, 0.87)']}
+            colors={[' rgba(0, 0, 0, 0)', ' rgba(14, 12, 12, 0.87)']}
+            start={{ x: 0.8, y: 0.2 }}
+            end={{ x: 0.35, y: 0.1 }}
             style={styles.background}
           />
           <Text style={styles.text}>{item.text}</Text>

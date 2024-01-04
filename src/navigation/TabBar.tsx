@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 20,
+    // paddingHorizontal: 20,
     bottom: 20, // here you can use the bottom inset for more flexbility
     left: 20,
     right: 20,

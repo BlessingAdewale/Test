@@ -35,21 +35,21 @@ export const SearchFeature = () => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: usePlatform().isAndroid ? 0 : layout.pixelSizeHorizontal(20),
+    paddingHorizontal: layout.pixelSizeHorizontal(20),
     marginBottom: layout.heightPixel(24),
   },
   searchButton: {
     position: 'absolute',
     right: layout.widthPixel(12),
-    left: usePlatform().isAndroid ? layout.widthPixel(295) : layout.widthPixel(325),
-    height: usePlatform().isAndroid ? layout.heightPixel(11) : layout.heightPixel(23),
+    left: usePlatform().isAndroid ? layout.widthPixel(325) : layout.widthPixel(325),
+    height: usePlatform().isAndroid ? layout.heightPixel(12) : layout.heightPixel(23),
     bottom: layout.heightPixel(72),
   },
   searchContainer: {
     backgroundColor: 'rgba(242, 242, 242, 0.50)',
     borderRadius: layout.fontPixel(12),
     marginRight: usePlatform().isAndroid
-      ? layout.pixelSizeHorizontal(65)
+      ? layout.pixelSizeHorizontal(62)
       : layout.pixelSizeHorizontal(49),
     height: usePlatform().isAndroid ? layout.heightPixel(77) : layout.heightPixel(77),
   },

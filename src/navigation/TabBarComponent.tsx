@@ -1,4 +1,4 @@
-import { Dimensions, Pressable, StyleSheet } from 'react-native';
+import { Dimensions, Pressable, StyleSheet, Text } from 'react-native';
 import React, { useEffect } from 'react';
 import Animated, {
   runOnUI,
@@ -10,11 +10,17 @@ import { TabNavigationState, ParamListBase, NavigationHelpers } from '@react-nav
 import { BottomTabNavigationEventMap } from '@react-navigation/bottom-tabs';
 import { AntDesign } from '@expo/vector-icons';
 import { theme } from '@constants';
+import { usePlatform } from '@hooks';
+import { layout } from '@utils';
+import HomeFocused from '@assets/images/homefocused.svg';
+import Orders from '@assets/images/orders.svg';
+import Wallet from '@assets/images/wallet.svg';
+import Profile from '@assets/images/profile.svg';
 export const routes = {
   home: { name: 'Home', icon: 'home' },
-  orders: { name: 'Orders', icon: 'home' },
-  wallet: { name: 'Wallet', icon: 'home' },
-  profiles: { name: 'Profile', icon: 'profile' },
+  orders: { name: 'Orders', icon: 'orders' },
+  wallet: { name: 'Wallet', icon: 'wallet' },
+  profile: { name: 'Profile', icon: 'profile' },
 };
 type Props = {
   state: TabNavigationState<ParamListBase>;
@@ -96,12 +102,35 @@ const TabBarComponent = ({ state, navigation, descriptors }: Props) => {
             onLongPress={onLongPress}
             style={styles.item}
           >
-            <AntDesign
+            {/* <AntDesign
               // name={icon}
-              size={24}
+              size={15}
               color={isFocused ? theme.colors.primary : theme.colors.bottomTabColor}
-            />
-          
+            /> */}
+            {icon === 'home' && isFocused ? (
+              <HomeFocused height={layout.heightPixel(24)} width={layout.widthPixel(24)} />
+            ) : null}
+            
+            {/* {icon === 'orders' && isFocused ? null : (
+              <Orders height={layout.heightPixel(24)} width={layout.widthPixel(24)} />
+            )}
+            {icon === 'wallet' && isFocused ? null : (
+              <Wallet height={layout.heightPixel(24)} width={layout.widthPixel(24)} />
+            )}
+            {icon === 'profile' && isFocused ? null : (
+              <Profile height={layout.heightPixel(24)} width={layout.widthPixel(24)} />
+            )} */}
+
+            <Text
+              style={{
+                color: isFocused ? theme.colors.primary : 'rgba(0, 0, 0, 0.50)',
+                fontFamily: 'Poppins_400Regular',
+                fontSize: layout.fontPixel(14),
+                fontWeight: '400',
+              }}
+            >
+              {label}
+            </Text>
           </Pressable>
         );
       })}
@@ -114,14 +143,15 @@ export default TabBarComponent;
 const styles = StyleSheet.create({
   container: {
     width: TAB_WIDTH,
-    height: 5,
-    backgroundColor: 'white',
+    height: layout.heightPixel(4),
+    backgroundColor: theme.colors.primary,
     zIndex: 0,
     position: 'absolute',
-    marginHorizontal: 20,
-    paddingBottom: 10,
-    borderTopRadius: 20,
-    // borderTopColor: 'white'
+    bottom: usePlatform().isAndroid ? layout.heightPixel(68) : layout.heightPixel(67),
+    marginHorizontal: layout.pixelSizeHorizontal(5),
+    // marginBottom: 150,
+    borderBottomRightRadius: layout.fontPixel(20),
+    borderBottomLeftRadius: layout.fontPixel(20),
   },
   item: {
     flex: 1,

@@ -11,8 +11,10 @@ export const MainBottomTabNavigator = () => {
   return (
     <BottomTab.Navigator
       initialRouteName="Home"
+      
       screenOptions={{
         headerShown: false,
+      
       }}
       tabBar={TabBar}
     >

@@ -5,6 +5,7 @@ import { Button } from 'react-native-paper';
 import { theme } from '@constants';
 import { globalStyles } from '@globalStyles';
 import { layout } from '@utils';
+import { usePlatform } from '@hooks';
 
 export const ProductHeader = ({ title }: any) => {
   return (
@@ -30,6 +31,7 @@ export const ProductHeader = ({ title }: any) => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.colors.secondary,
+    marginHorizontal: usePlatform().isAndroid? 0 : 0 
     // height: layout.heightPixel(90),
   },
   title: {
@@ -64,7 +66,7 @@ const styles = StyleSheet.create({
     borderRadius: layout.fontPixel(6),
     // marginLeft: layout.pixelSizeHorizontal(205),
     position: 'absolute',
-    left: layout.widthPixel(336),
+    left:  layout.widthPixel(336),
     // right: layout.widthPixel(12),
     // top: layout.heightPixel(12),
     // bottom: layout.heightPixel(12),
