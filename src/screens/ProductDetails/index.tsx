@@ -333,7 +333,7 @@ paddingHorizontal: layout.pixelSizeHorizontal(10),
     fontWeight: '500',
   },
   downloadButton: {
-    paddingTop: layout.pixelSizeVertical(10),
+    paddingTop: layout.pixelSizeVertical(19),
   },
   lastWrap: {
     backgroundColor: theme.colors.background,

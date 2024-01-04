@@ -5,6 +5,7 @@ import { images, theme } from '@constants';
 import MyNotificationImage from '@assets/images/notification.svg';
 import WavingHand from '@assets/images/waving.svg';
 import { layout } from '@utils';
+import { usePlatform } from '@hooks';
 
 const date = new Date();
 const currentTime = date.getHours();
@@ -23,17 +24,22 @@ export const HomeHeader = () => {
   return (
     <View style={styles.firstWrapper}>
       <View style={styles.secondWrapper}>
-        <Avatar.Image size={28} source={images.avatar} theme={{ colors: { primary: theme.colors.secondary } }}  style={styles.avatar} />
+        <Avatar.Image
+          size={28}
+          source={images.avatar}
+          theme={{ colors: { primary: theme.colors.secondary } }}
+          style={styles.avatar}
+        />
         <View>
-          <Text style={styles.greeting} >
+          <Text style={styles.greeting}>
             {greeting}
             <WavingHand height={layout.heightPixel(20)} width={layout.widthPixel(20)} />
           </Text>
-          <Text style={styles.welcomeback} >Welcome back </Text>
+          <Text style={styles.welcomeback}>Welcome back </Text>
         </View>
       </View>
       <TouchableOpacity>
-        <MyNotificationImage height={layout.heightPixel(34)}  />
+        <MyNotificationImage height={layout.heightPixel(34)} />
       </TouchableOpacity>
     </View>
   );
@@ -44,8 +50,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingTop: layout.pixelSizeVertical(20),
-    paddingHorizontal: layout.pixelSizeHorizontal(20),
+    paddingTop: usePlatform().isAndroid
+      ? layout.pixelSizeVertical(90)
+      : layout.pixelSizeVertical(20),
+    paddingHorizontal: usePlatform().isAndroid ? 0 : layout.pixelSizeHorizontal(20),
     paddingBottom: layout.pixelSizeVertical(20),
   },
   secondWrapper: {
@@ -56,16 +64,16 @@ const styles = StyleSheet.create({
   avatar: {
     marginRight: layout.pixelSizeHorizontal(24),
   },
-  greeting:{
+  greeting: {
     color: '#110',
     fontSize: layout.fontPixel(16),
     fontWeight: '600',
     fontFamily: 'Poppins_600SemiBold',
   },
-  welcomeback:{
+  welcomeback: {
     color: '#110',
     fontSize: layout.fontPixel(13),
     fontWeight: '300',
-    fontFamily: 'Poppins_300Light'
-  }
+    fontFamily: 'Poppins_300Light',
+  },
 });

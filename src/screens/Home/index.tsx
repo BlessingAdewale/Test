@@ -3,10 +3,13 @@ import React from 'react';
 import { globalStyles } from '@globalStyles';
 import { CarouselSlide, HomeHeader, SearchFeature, InformationCard } from '@components';
 import { livestockData, refrigeratedData, dryProductsData, farmInputsData } from '@constants';
+import { usePlatform } from '@hooks';
 
 export const Home = () => {
   return (
+   
     <SafeAreaView style={[globalStyles.container]}>
+      
       <ScrollView showsVerticalScrollIndicator={false} >
         <HomeHeader />
         <SearchFeature />

@@ -86,7 +86,7 @@ export const refrigeratedData = [
     price: '10,000',
     image: images.grapes,
     seller: 'Ajike Njoku',
-    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi... Read More',
+    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi...',
     warehouseDistribution: {
       name: 'Gennee Warehousing',
       weight: '20.00 Ton',
@@ -122,7 +122,7 @@ export const refrigeratedData = [
     image: images.grapes,
     price: '10,000',
     seller: 'Ajike Njoku',
-    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi... Read More',
+    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi...',
     warehouseDistribution: {
       name: 'Gennee Warehousing',
       weight: '20.00 Ton',
@@ -144,7 +144,7 @@ export const dryProductsData = [
     image: images.yam,
     price: '10,000',
     seller: 'Ajike Njoku',
-    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi... Read More',
+    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi...',
     warehouseDistribution: {
       name: 'Gennee Warehousing',
       weight: '20.00 Ton',
@@ -238,7 +238,7 @@ export const farmInputsData = [
     image: images.yam,
     price: '10,000',
     seller: 'Ajike Njoku',
-    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi... Read More',
+    note: 'Lorem ipsum dolor sit amet consectetur. Sit imperdiet tempus ut scelerisque in enim laoreet ut mi...',
     warehouseDistribution: {
       name: 'Gennee Warehousing',
       weight: '20.00 Ton',
