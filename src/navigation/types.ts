@@ -15,7 +15,8 @@ export type MainBottomTabParamList = {
 };
 
 export type HomeTabNavigationProp = NativeStackNavigationProp<RootStackParamList, 'HomeStack'>;
-export type ProductDetailsProp = RouteProp<
+export type ProductDetailsNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
   'ProductDetails'
 >;
+export type ProductDetailsProp = RouteProp<RootStackParamList, 'ProductDetails'>;

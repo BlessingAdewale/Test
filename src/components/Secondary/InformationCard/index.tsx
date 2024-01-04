@@ -18,7 +18,7 @@ export const InformationCard = ({ data, title }: Props | any) => {
   const renderItem = React.useCallback(({ item }: AllDataType | any) => {
     return (
       <View style={styles.wrapper}>
-        <TouchableOpacity activeOpacity={0.3} onPress={() => navigation.navigate('ProductDetails', item)}>
+        <TouchableOpacity activeOpacity={0.3} onPress={() => navigation.navigate('ProductDetails', {...item})}>
           <Image style={styles.image} source={item.image} />
         </TouchableOpacity>
         <Text style={styles.name}>{item.name}</Text>
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   perKg: {
     fontStyle: 'italic',
     fontWeight: '400',
-    color: theme.colors.blackTextCoor,
+    color: 'rgba(9, 9, 9, 1)',
     fontFamily: 'Poppins_400Regular_Italic',
   },
 });

@@ -15,6 +15,7 @@ export interface AllDataType {
     title: any;
     id: string;
     name: string;
+    productType: string;
     rated: string;
     numberOfPeopleThatRated: string;
     image: number;
